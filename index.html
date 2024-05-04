@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="style.css">
+  <title>product-details</title>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
+    <symbol id="increment" viewBox="0 0 24 24">
+      <path fill-rule="evenodd"
+        d="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+    </symbol>
+    <symbol id="decrement" viewBox="0 0 15 15">
+      <path fill-rule="evenodd" clip-rule="evenodd" fill="black" d="M11 8H4V7H11V8Z">
+      </path>
+    </symbol>
+  </svg>
+  <article class="product-details">
+    <div class="container">
+      <div class="card">
+        <div class="price">
+          <div class="price_title">
+            <strong>Price:</strong>
+          </div>
+          <div class="price_sale">
+            <h2>$1,899.00</h2>
+          </div>
+          <div class="price_regular">
+            <s>$1,899.00</s>
+          </div>
+        </div>
+        <div class="variant">
+          <fieldset>
+            <legend class="variant-element_title visually-hidden">
+              Select Size: 18"-18"
+            </legend>
+            <div class="variant_row">
+              <div class="variant_row_title">
+                <strong>Select Size: 18"-18"</strong>
+              </div>
+              <div class="variant_row_btn">
+                <button class="button button--link btn-anchor">Size Guide</button>
+              </div>
+              <div class="variant_row_option">
+                <div>
+                  <input class="variant_input" type="radio" name="size" id="ctrl-1" />
+                  <label class="variant_label variant-element_label" for="ctrl-1">10"-10"</label>
+                </div>
+                <div>
+                  <input class="variant_input" type="radio" name="size" id="ctrl-2" />
+                  <label class="variant_label variant-element_label" for="ctrl-2">12"-12"</label>
+                </div>
+                <div>
+                  <input class="variant_input" type="radio" name="size" id="ctrl-3" />
+                  <label class="variant_label variant-element_label" for="ctrl-3">18"-18"</label>
+                </div>
+                <div>
+                  <input class="variant_input" type="radio" name="size" id="ctrl-4" />
+                  <label class="variant_label variant-element_label" for="ctrl-4">20"-20"</label>
+                </div>
+                <div>
+                  <input class="variant_input" type="radio" name="size" id="ctrl-5" />
+                  <label class="variant_label variant-element_label" for="ctrl-5">22"-22"</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend class="variant-element_title visually-hidden">Select Color:</legend>
+            <div class="variant_row">
+              <div class="variant_row_title">
+                <strong>Select Color:</strong>
+              </div>
+              <div class="variant_row_option">
+                <div>
+                  <input class="variant_input" type="radio" name="color" id="ctrl-6" />
+                  <label class="variant_label variant-element_label" for="ctrl-6">Blue</label>
+                </div>
+                <div>
+                  <input class="variant_input" type="radio" name="color" id="ctrl-7" />
+                  <label class="variant_label variant-element_label" for="ctrl-7">Yellow</label>
+                </div>
+                <div>
+                  <input class="variant_input" type="radio" name="color" id="ctrl-8" />
+                  <label class="variant_label variant-element_label" for="ctrl-8">Green</label>
+                </div>
+                <div>
+                  <input class="variant_input" type="radio" name="color" id="ctrl-9" />
+                  <label class="variant_label variant-element_label" for="ctrl-9">Orange</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="quantity-wrapper">
+          <div class="quantity-title">
+            <strong>Product Quantity: 3</strong>
+          </div>
+          <quantity-input class="quantity">
+            <div class="quantity_extra-wrap">
+              <button class="quantity_decreases quantity_button" name="minus" type="button">
+                <svg width="20" height="20">
+                  <use href="#decrement"></use>
+                </svg>
+              </button>
+              <input class="quantity_input quantity__input" type="number" name="quantity" value="1" quantity="1"
+                data-min="1" min="1" step="1" />
+              <button class="quantity_increases quantity_button" name="plus" type="button">
+                <svg width="13" height="13">
+                  <use href="#increment"></use>
+                </svg>
+              </button>
+            </div>
+          </quantity-input>
+          <strong class="quantity_subtotal-wrap quantity_qty-subtotal-wrap">
+            <span class="qqsw_title">Subtotal:</span>
+            <span class="quantity_subtotal">$86.00</span>
+          </strong>
+        </div>
+        <div class="button-wrapper">
+          <button class="button-wrapper_btn button button--primary ">ADD TO BAG</button>
+          <button class="button-wrapper_btn button button--secondary ">BUY IT NOW</button>
+          <button class="button-wrapper_btn button button--success">WHATSAPP</button>
+        </div>
+        <div class="pickup">
+          <h3 class="pickup_available">Pickup available at Toronto-Urban Den</h3>
+          <h3 class="pickup_hours">Usally ready in 24 hours</h3>
+          <button class="button button--link button-link--pickup btn-anchor">Check availability at other stores</button>
+        </div>
+      </div>
+    </div>
+  </article>
+  <script src="js/global.js" defer></script>
+</body>
+</html>
